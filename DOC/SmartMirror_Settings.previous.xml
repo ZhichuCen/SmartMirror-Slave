@@ -12,7 +12,7 @@
         <group name="Clock settings">
           <group name="Input clock">
             <Clock_type v="External clock source"/>
-            <Clock_frequency__MHz_ v="12"/>
+            <Clock_frequency__MHz_ v="16"/>
             <group name="Clock input pin">
               <Pin v="EXTAL"/>
               <Pin_signal v=""/>
@@ -204,7 +204,7 @@
       <list name="Shared speed modes settings" v="1">
         <group name="Enabled speed modes">
           <boolgroup name="High speed mode" v="Enabled">
-            <Internal_bus_clock v="6"/>
+            <Internal_bus_clock v="8"/>
             <boolgroup name="PLL clock" v="Disabled" />
           </boolgroup>
           <boolgroup name="Low speed mode" v="Disabled" />
@@ -382,7 +382,7 @@ asm(BGND);
         <group name="Clock settings">
           <Value_of_Preselection v="0"/>
           <Value_of_Selection v="0"/>
-          <Frequency v="3 MHz"/>
+          <Frequency v="4 MHz"/>
         </group>
         <Mode_Select v="Slave"/>
         <Clock_Polarity v="active-high"/>
@@ -456,13 +456,13 @@ asm(BGND);
       <group name="Settings">
         <group name="Clock settings">
           <Prescaler_B_select v="1"/>
-          <Clock_B_frequency v="6000 kHz"/>
+          <Clock_B_frequency v="8000 kHz"/>
           <Prescaler_A_select v="1"/>
-          <Clock_A_frequency v="6000 kHz"/>
+          <Clock_A_frequency v="8000 kHz"/>
           <Scale_value_of_clock_SB v="0"/>
-          <Clock_SB_frequency v="11.71 kHz"/>
+          <Clock_SB_frequency v="15.62 kHz"/>
           <Scale_value_of_clock_SA v="0"/>
-          <Clock_SA_frequency v="11.71 kHz"/>
+          <Clock_SA_frequency v="15.62 kHz"/>
         </group>
         <Concatenate_Channels_6_and_7 v="no"/>
         <Concatenate_Channels_4_and_5 v="no"/>
@@ -508,20 +508,20 @@ asm(BGND);
       <Device v="MSCAN0"/>
       <group name="Settings">
         <group name="Clock settings">
-          <Clock_Source v="Bus Clock"/>
-          <Baud_Rate_Prescaler v="6"/>
+          <Clock_Source v="Oscillator Clock"/>
+          <Baud_Rate_Prescaler v="1"/>
           <Synchr__Jump_Width v="1"/>
           <Sampling v="One sample per bit"/>
-          <Time_Segment_1 v="9"/>
-          <Time_Segment_2 v="4"/>
-          <CAN_frequency v="1 MHz"/>
-          <Time_quantum v="1000 ns"/>
-          <Bit_rate v="71.42 kbit/s"/>
+          <Time_Segment_1 v="1"/>
+          <Time_Segment_2 v="1"/>
+          <CAN_frequency v="16 MHz"/>
+          <Time_quantum v="62.5 ns"/>
+          <Bit_rate v="5333.33 kbit/s"/>
         </group>
         <CAN_Stops_in_Wait_Mode v="no"/>
         <Wake_Up_Mode v="None"/>
         <Loop_Back_Test_Mode v="Disabled"/>
-        <Listen_Only_Mode v="Normal operation"/>
+        <Listen_Only_Mode v="Activated"/>
         <Sleep_Mode_Request v="Disabled"/>
         <Time_Stamp v="Disabled"/>
         <Bus_off_recovery_mode v="Automatic"/>
@@ -578,7 +578,7 @@ asm(BGND);
       </group>
       <group name="Initialization">
         <Call_Init_method v="yes"/>
-        <CAN_Enable v="yes"/>
+        <CAN_Enable v="no"/>
         <Initial_status v="Initialization mode"/>
       </group>
     </Properties>

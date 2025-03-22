@@ -6,7 +6,7 @@
 **     Component : Init_PWM
 **     Version   : Component 01.158, Driver 01.13, CPU db: 3.00.020
 **     Compiler  : CodeWarrior HCS12X C Compiler
-**     Date/Time : 2025-03-22, 18:03
+**     Date/Time : 2025-03-22, 18:26
 **     Abstract  :
 **          This file implements the PWM (from channel PWM0 to channel PWMx,
 **          the actual count of PWM channels depends on the HCS12 derivative)
@@ -26,13 +26,13 @@
 **          Settings                                       : 
 **            Clock settings                               : 
 **              Prescaler B select                         : 1
-**              Clock B frequency                          : 8000 kHz
+**              Clock B frequency                          : 6000 kHz
 **              Prescaler A select                         : 1
-**              Clock A frequency                          : 8000 kHz
+**              Clock A frequency                          : 6000 kHz
 **              Scale value of clock SB                    : 0
-**              Clock SB frequency                         : 15.62 kHz
+**              Clock SB frequency                         : 11.71 kHz
 **              Scale value of clock SA                    : 0
-**              Clock SA frequency                         : 15.62 kHz
+**              Clock SA frequency                         : 11.71 kHz
 **            Concatenate Channels 6 and 7                 : no
 **            Concatenate Channels 4 and 5                 : no
 **            Concatenate Channels 2 and 3                 : no

@@ -6,7 +6,7 @@
 **     Component : Init_SPI
 **     Version   : Component 01.083, Driver 01.09, CPU db: 3.00.020
 **     Compiler  : CodeWarrior HCS12X C Compiler
-**     Date/Time : 2025-03-22, 18:03
+**     Date/Time : 2025-03-22, 18:26
 **     Abstract  :
 **          This file implements the SPI (SPI0)
 **          module initialization according to the Peripheral Initialization
@@ -25,7 +25,7 @@
 **          Device                                         : SPI0
 **          Value of Preselection                          : 0
 **          Value of Selection                             : 0
-**          Frequency                                      : 4 MHz
+**          Frequency                                      : 3 MHz
 **          Mode Select                                    : Slave
 **          SS pin mode                                    : General Purpose I/O
 **          Allocate SS pin                                : Enabled

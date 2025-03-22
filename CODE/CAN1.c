@@ -6,7 +6,7 @@
 **     Component : Init_MSCAN
 **     Version   : Component 01.067, Driver 01.11, CPU db: 3.00.020
 **     Compiler  : CodeWarrior HCS12X C Compiler
-**     Date/Time : 2025-03-22, 18:03
+**     Date/Time : 2025-03-22, 18:26
 **     Abstract  :
 **          This file implements the MSCAN (MSCAN0) module initialization
 **          according to the Peripheral Initialization Bean settings,
@@ -44,19 +44,19 @@
 **     Settings  :
 **          Bean name                                      : CAN1
 **          Device                                         : MSCAN0
-**          Clock Source                                   : Oscillator Clock
-**          Baud Rate Prescaler                            : 1
+**          Clock Source                                   : Bus Clock
+**          Baud Rate Prescaler                            : 6
 **          Synchr. Jump Width                             : 1
 **          Sampling                                       : One sample per bit
-**          Time Segment 1                                 : 1
-**          Time Segment 2                                 : 1
-**          CAN frequency                                  : 16 MHz
-**          Time quantum                                   : 62.5 ns
-**          Bit rate                                       : 5333.33 kbit/s
+**          Time Segment 1                                 : 9
+**          Time Segment 2                                 : 4
+**          CAN frequency                                  : 1 MHz
+**          Time quantum                                   : 1000 ns
+**          Bit rate                                       : 71.42 kbit/s
 **          CAN Stops in Wait Mode                         : no
 **          Wake-Up Mode                                   : None
 **          Loop Back Test Mode                            : Disabled
-**          Listen Only Mode                               : Activated
+**          Listen Only Mode                               : Normal operation
 **          Sleep Mode Request                             : Disabled
 **          Time Stamp                                     : Disabled
 **          Acceptance mode                                : Two 32 bit Acceptance Filters
@@ -94,7 +94,7 @@
 **          Tx interrupt priority                          : 1
 **          ISR name                                       : 
 **          Call Init in CPU init. code                    : yes
-**          CAN Enable                                     : no
+**          CAN Enable                                     : yes
 **     Contents  :
 **         Init - void CAN1_Init(void);
 **
@@ -126,12 +126,12 @@ void CAN1_Init(void)
   setReg8Bits(CAN0CTL0, 0x01U);         
   while(CAN0CTL1_INITAK == 0U) {       /* Wait for init acknowledge */
   }
-  /* CAN0CTL1: CANE=0,CLKSRC=0,LOOPB=0,LISTEN=1,BORM=0,WUPM=0,SLPAK=0,INITAK=1 */
-  setReg8(CAN0CTL1, 0x11U);             
-  /* CAN0BTR1: SAMP=0,TSEG22=0,TSEG21=0,TSEG20=0,TSEG13=0,TSEG12=0,TSEG11=0,TSEG10=0 */
-  setReg8(CAN0BTR1, 0x00U);             
-  /* CAN0BTR0: SJW1=0,SJW0=0,BRP5=0,BRP4=0,BRP3=0,BRP2=0,BRP1=0,BRP0=0 */
-  setReg8(CAN0BTR0, 0x00U);             
+  /* CAN0CTL1: CANE=1,CLKSRC=1,LOOPB=0,LISTEN=0,BORM=0,WUPM=0,SLPAK=0,INITAK=1 */
+  setReg8(CAN0CTL1, 0xC1U);             
+  /* CAN0BTR1: SAMP=0,TSEG22=0,TSEG21=1,TSEG20=1,TSEG13=1,TSEG12=0,TSEG11=0,TSEG10=0 */
+  setReg8(CAN0BTR1, 0x38U);             
+  /* CAN0BTR0: SJW1=0,SJW0=0,BRP5=0,BRP4=0,BRP3=0,BRP2=1,BRP1=0,BRP0=1 */
+  setReg8(CAN0BTR0, 0x05U);             
   /* CAN0IDAC: ??=0,??=0,IDAM1=0,IDAM0=0,??=0,IDHIT2=0,IDHIT1=0,IDHIT0=0 */
   setReg8(CAN0IDAC, 0x00U);             
   /* CAN0IDAR0: AC7=0,AC6=0,AC5=0,AC4=0,AC3=0,AC2=0,AC1=0,AC0=0 */

@@ -40,7 +40,7 @@ Section Name                    Size  Type     From       To       Segment
 .startData                        10     R     0xC01F     0xC028   ROM_C000
 NON_BANKED                        11     R     0xC029     0xC033   ROM_C000
 .copy                              2     R     0xC034     0xC035   ROM_C000
-.text                            255     R   0xFE8000   0xFE80FE   PAGE_FE
+.text                            259     R   0xFE8000   0xFE8102   PAGE_FE
 .abs_section_8                     1   N/I        0x8        0x8   .absSeg0
 .abs_section_9                     1   N/I        0x9        0x9   .absSeg1
 .abs_section_b                     1   N/I        0xB        0xB   .absSeg2
@@ -337,7 +337,7 @@ NON_BANKED                        11     R     0xC029     0xC033   ROM_C000
 .stack                           128   R/W     0x2000     0x207F   RAM
 
 Summary of section sizes per section type:
-READ_ONLY (R):         225 (dec:      549)
+READ_ONLY (R):         229 (dec:      553)
 READ_WRITE (R/W):       80 (dec:      128)
 NO_INIT (N/I):         168 (dec:      360)
 
@@ -374,11 +374,11 @@ MODULE:                 -- PWM8.c.o --
 - VARIABLES:
 MODULE:                 -- CAN1.c.o --
 - PROCEDURES:
-     CAN1_Init                               FE80A0      4C      76       2   .text       
+     CAN1_Init                               FE80A0      50      80       2   .text       
 - VARIABLES:
 MODULE:                 -- GPIO1.c.o --
 - PROCEDURES:
-     GPIO1_Init                              FE80EC       D      13       2   .text       
+     GPIO1_Init                              FE80F0       D      13       2   .text       
 - VARIABLES:
 MODULE:                 -- IO_Map.c.o --
 - PROCEDURES:
@@ -681,7 +681,7 @@ MODULE:                 -- Vectors.c.o --
      _ResetVectorTable                         FFFA       6       6       0   .abs_section_fffa
 MODULE:                 -- SmartMirror.c.o --
 - PROCEDURES:
-     main                                    FE80F9       6       6       2   .text       
+     main                                    FE80FD       6       6       2   .text       
 - VARIABLES:
 
 *********************************************************************************************
@@ -692,7 +692,7 @@ MODULE STATISTIC
   Cpu.c.o                                      0    103      0
   SPI1.c.o                                     0     14      0
   PWM8.c.o                                     0     33      0
-  CAN1.c.o                                     0     76      0
+  CAN1.c.o                                     0     80      0
   GPIO1.c.o                                    0     13      0
   IO_Map.c.o                                 360      0      0
   Vectors.c.o                                  0      0    240
@@ -1599,9 +1599,9 @@ OBJECT LIST SORTED BY ADDRESS
      PE_low_level_init                       FE8029      48      72       2   .text       
      SPI1_Init                               FE8071       E      14       2   .text       
      PWM8_Init                               FE807F      21      33       2   .text       
-     CAN1_Init                               FE80A0      4C      76       2   .text       
-     GPIO1_Init                              FE80EC       D      13       2   .text       
-     main                                    FE80F9       6       6       2   .text       
+     CAN1_Init                               FE80A0      50      80       2   .text       
+     GPIO1_Init                              FE80F0       D      13       2   .text       
+     main                                    FE80FD       6       6       2   .text       
 
 *********************************************************************************************
 UNUSED-OBJECTS SECTION
@@ -1681,5 +1681,5 @@ STATISTIC SECTION
 ExeFile:
 --------
 Number of blocks to be downloaded: 7
-Total size of all blocks to be downloaded: 549
+Total size of all blocks to be downloaded: 553
 

@@ -6,7 +6,7 @@
 **     Component : Init_MSCAN
 **     Version   : Component 01.067, Driver 01.11, CPU db: 3.00.020
 **     Compiler  : CodeWarrior HCS12X C Compiler
-**     Date/Time : 2025-03-22, 18:03
+**     Date/Time : 2025-03-22, 18:26
 **     Abstract  :
 **          This file implements the MSCAN (MSCAN0) module initialization
 **          according to the Peripheral Initialization Bean settings,
@@ -44,19 +44,19 @@
 **     Settings  :
 **          Bean name                                      : CAN1
 **          Device                                         : MSCAN0
-**          Clock Source                                   : Oscillator Clock
-**          Baud Rate Prescaler                            : 1
+**          Clock Source                                   : Bus Clock
+**          Baud Rate Prescaler                            : 6
 **          Synchr. Jump Width                             : 1
 **          Sampling                                       : One sample per bit
-**          Time Segment 1                                 : 1
-**          Time Segment 2                                 : 1
-**          CAN frequency                                  : 16 MHz
-**          Time quantum                                   : 62.5 ns
-**          Bit rate                                       : 5333.33 kbit/s
+**          Time Segment 1                                 : 9
+**          Time Segment 2                                 : 4
+**          CAN frequency                                  : 1 MHz
+**          Time quantum                                   : 1000 ns
+**          Bit rate                                       : 71.42 kbit/s
 **          CAN Stops in Wait Mode                         : no
 **          Wake-Up Mode                                   : None
 **          Loop Back Test Mode                            : Disabled
-**          Listen Only Mode                               : Activated
+**          Listen Only Mode                               : Normal operation
 **          Sleep Mode Request                             : Disabled
 **          Time Stamp                                     : Disabled
 **          Acceptance mode                                : Two 32 bit Acceptance Filters
@@ -94,7 +94,7 @@
 **          Tx interrupt priority                          : 1
 **          ISR name                                       : 
 **          Call Init in CPU init. code                    : yes
-**          CAN Enable                                     : no
+**          CAN Enable                                     : yes
 **     Contents  :
 **         Init - void CAN1_Init(void);
 **

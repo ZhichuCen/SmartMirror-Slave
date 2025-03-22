@@ -7,7 +7,7 @@
 **     Version   : Component 01.003, Driver 02.06, CPU db: 3.00.020
 **     Datasheet : MC9S12XS256RMV1 Rev. 1.03 06/2008
 **     Compiler  : CodeWarrior HCS12X C Compiler
-**     Date/Time : 2025-03-22, 18:03
+**     Date/Time : 2025-03-22, 18:26
 **     Abstract  :
 **         This component "MC9S12XS256_112" implements properties, methods,
 **         and events of the CPU.
@@ -42,13 +42,13 @@
 
 #pragma DATA_SEG DEFAULT               /* Select data segment "DEFAULT" */
 
-#define CPU_BUS_CLK_HZ              0x007A1200UL /* Initial value of the bus clock frequency in Hz */
+#define CPU_BUS_CLK_HZ              0x005B8D80UL /* Initial value of the bus clock frequency in Hz */
 
-#define CPU_INSTR_CLK_HZ            0x007A1200UL /* Initial value of the instruction clock frequency in Hz */
+#define CPU_INSTR_CLK_HZ            0x005B8D80UL /* Initial value of the instruction clock frequency in Hz */
 
-#define CPU_EXT_CLK_HZ              0x00F42400UL /* Value of the main clock frequency (crystal or external clock) in Hz */
+#define CPU_EXT_CLK_HZ              0x00B71B00UL /* Value of the main clock frequency (crystal or external clock) in Hz */
 
-#define CPU_TICK_NS                 0x3EU /* CPU tick is a unit derived from the frequency of external clock source. If no external clock is enabled or available it is derived from the value of internal clock source. The value of this constant represents period of the clock source in ns. */
+#define CPU_TICK_NS                 0x53LU /* CPU tick is a unit derived from the frequency of external clock source. If no external clock is enabled or available it is derived from the value of internal clock source. The value of this constant represents period of the clock source in ns. */
 
 #define CPU_CORE_HCS12X                /* Specification of the core type of the selected cpu */
 #define CPU_DERIVATIVE_MC9S12XS128     /* Name of the selected cpu derivative */

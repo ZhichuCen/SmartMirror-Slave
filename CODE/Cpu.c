@@ -7,7 +7,7 @@
 **     Version   : Component 01.003, Driver 02.06, CPU db: 3.00.020
 **     Datasheet : MC9S12XS256RMV1 Rev. 1.03 06/2008
 **     Compiler  : CodeWarrior HCS12X C Compiler
-**     Date/Time : 2025-03-22, 18:03
+**     Date/Time : 2025-03-22, 18:26
 **     Abstract  :
 **         This component "MC9S12XS256_112" implements properties, methods,
 **         and events of the CPU.
@@ -34,7 +34,7 @@
 #include "Events.h"
 #include "Cpu.h"
 
-#define CGM_DELAY  0x03FFU
+#define CGM_DELAY  0x02FFU
 
 #pragma DATA_SEG DEFAULT               /* Select data segment "DEFAULT" */
 #pragma CODE_SEG DEFAULT
